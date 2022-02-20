@@ -1,0 +1,60 @@
+@import "./styles/variables";
+@import "./styles/mixins";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: $xxl-bp;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @include breakpoint($xxl-bp) {
+    max-width: $xl-bp;
+  }
+
+  @include breakpoint($xl-bp) {
+    max-width: $lg-bp;
+  }
+
+  @include breakpoint($lg-bp) {
+    max-width: $md-bp;
+  }
+
+  @include breakpoint($md-bp) {
+    max-width: $sm-bp;
+  }
+}
+
+.grid-wrapper {
+  display: grid;
+
+  grid-template-areas:
+    "header header header"
+    "sidebar content content";
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 10px;
+
+}
