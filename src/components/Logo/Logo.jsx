@@ -1,10 +1,10 @@
 import React from 'react'
-import './Logo.scss'
+import classes from './Logo.module.scss'
 
 const Logo = () => {
   return (
-    <div className="logo">
-      <img className="logo__image" src="./img/logo.png" alt="logo"/>
+    <div className={classes.logo}>
+      <img src="./img/logo.png" alt="logo"/>
     </div>
   )
 }

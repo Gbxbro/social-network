@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './components/Header/Header'
 import Sidebar from './components/Sidebar/Sidebar'
-import Content from "./components/Content/Content";
+import Profile from "./components/Profile/Profile";
 import './App.scss'
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
         <div className="grid-wrapper">
           <Header />
           <Sidebar />
-          <Content />
+          <Profile />
         </div>
       </div>
     </div>

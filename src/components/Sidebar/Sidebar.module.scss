@@ -3,21 +3,16 @@
 .sidebar {
   grid-area: sidebar;
   background-color: $green;
+  height: 100%;
 }
 
 .nav {
 
-  // .nav__list
-  &__list {
-
+  .list {
+    list-style: none;
   }
 
-  // .nav__item
-  &__item {
-    font-size: 35px;
-    line-height: 45px;
-    color: $white;
-
+  .item {
     &:not(:last-child) {
       margin-bottom: 10px;
     }
@@ -25,5 +20,12 @@
     &:last-child {
       margin-top: 40px;
     }
+  }
+
+  .link {
+    text-decoration: none;
+    font-size: 35px;
+    line-height: 45px;
+    color: $white;
   }
 }
