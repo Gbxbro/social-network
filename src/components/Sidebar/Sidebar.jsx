@@ -1,35 +1,37 @@
 import React from 'react'
+import CustomLink from '../UI/CustomLink'
 import classes from './Sidebar.module.scss'
 
 const Sidebar = () => {
+
   return (
     <section className={classes.sidebar}>
       <nav className={classes.nav}>
         <ul className={classes.list}>
           <li className={classes.item}>
-            <a className={classes.link} href="#">
+            <CustomLink to="/profile" styles={classes.active}>
               Profile
-            </a>
+            </CustomLink>
           </li>
           <li className={classes.item}>
-            <a className={classes.link} href="#">
+            <CustomLink to="/dialogs" styles={classes.active}>
               Messages
-            </a>
+            </CustomLink>
           </li>
           <li className={classes.item}>
-            <a className={classes.link} href="#">
+            <CustomLink to="/news" styles={classes.active}>
               News
-            </a>
+            </CustomLink>
           </li>
           <li className={classes.item}>
-            <a className={classes.link} href="#">
+            <CustomLink to="/music" styles={classes.active}>
               Music
-            </a>
+            </CustomLink>
           </li>
           <li className={classes.item}>
-            <a className={classes.link} href="#">
+            <CustomLink to="/settings" styles={classes.active}>
               Settings
-            </a>
+            </CustomLink>
           </li>
         </ul>
       </nav>
