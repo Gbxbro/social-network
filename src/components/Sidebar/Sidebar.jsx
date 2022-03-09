@@ -1,5 +1,5 @@
 import React from 'react'
-import CustomLink from '../UI/CustomLink'
+import SidebarLink from './SidebarLink/SidebarLink'
 import classes from './Sidebar.module.scss'
 
 const Sidebar = () => {
@@ -9,29 +9,88 @@ const Sidebar = () => {
       <nav className={classes.nav}>
         <ul className={classes.list}>
           <li className={classes.item}>
-            <CustomLink to="/profile" styles={classes.active}>
-              Profile
-            </CustomLink>
+            <SidebarLink
+              to="/profile"
+              styles={classes}
+              text="Profile"
+            >
+              <svg
+                height="100"
+                width="100"
+              >
+                <use xlinkHref="./img/icons/sidebar/sidebar-sprite.svg#home-icon"></use>
+              </svg>
+            </SidebarLink>
           </li>
           <li className={classes.item}>
-            <CustomLink to="/dialogs" styles={classes.active}>
-              Messages
-            </CustomLink>
+            <SidebarLink
+              to="/home"
+              styles={classes}
+              text="Home"
+            >
+              <svg
+                height="100"
+                width="100"
+              >
+                <use xlinkHref="./img/icons/sidebar/sidebar-sprite.svg#home-icon"></use>
+              </svg>
+            </SidebarLink>
           </li>
           <li className={classes.item}>
-            <CustomLink to="/news" styles={classes.active}>
-              News
-            </CustomLink>
+            <SidebarLink
+              to="/dialogs"
+              styles={classes}
+              text="Messages"
+            >
+              <svg
+                height="100"
+                width="100"
+              >
+                <use xlinkHref="./img/icons/sidebar/sidebar-sprite.svg#messages-icon"></use>
+              </svg>
+            </SidebarLink>
           </li>
           <li className={classes.item}>
-            <CustomLink to="/music" styles={classes.active}>
-              Music
-            </CustomLink>
+            <SidebarLink
+              to="/news"
+              styles={classes}
+              text="News"
+            >
+              <svg
+                height="100"
+                width="100"
+              >
+                <use xlinkHref="./img/icons/sidebar/sidebar-sprite.svg#news-icon"></use>
+              </svg>
+            </SidebarLink>
           </li>
           <li className={classes.item}>
-            <CustomLink to="/settings" styles={classes.active}>
-              Settings
-            </CustomLink>
+            <SidebarLink
+              to="/music"
+              styles={classes}
+              text="Music"
+            >
+              <svg
+                height="100"
+                width="100"
+              >
+                <use xlinkHref="./img/icons/sidebar/sidebar-sprite.svg#music-icon"></use>
+              </svg>
+            </SidebarLink>
+          </li>
+          <li className={classes.item}>
+            <SidebarLink
+              to="/settings"
+              styles={classes}
+              text="Settings"
+            >
+              <svg
+                height="100"
+                width="100"
+              >
+                <use xlinkHref="./img/icons/sidebar/sidebar-sprite.svg#settings-icon"></use>
+              </svg>
+            </SidebarLink>
           </li>
         </ul>
       </nav>

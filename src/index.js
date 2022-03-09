@@ -9,6 +9,7 @@ import {
 
 import App from './App'
 import Profile from './components/Profile/Profile'
+import Home from './components/Home/Home'
 import Dialogs from './components/Dialogs/Dialogs'
 import News from './components/News/News'
 import Music from './components/Music/Music'
@@ -20,8 +21,9 @@ ReactDOM.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
-        <Route path="/" element={<Navigate to="/profile" replace/>}/>
+        <Route path="/" element={<Navigate to="/home" replace/>}/>
         <Route path="/profile" element={<Profile />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/dialogs" element={<Dialogs />} />
         <Route path="/news" element={<News />} />
         <Route path="/music" element={<Music />} />
