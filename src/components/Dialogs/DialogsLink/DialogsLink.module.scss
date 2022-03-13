@@ -1,0 +1,19 @@
+@import '../../../styles/variables';
+
+.linkBody {
+  border: 1px solid $mainGreen;
+  padding: 10px;
+
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 20px;
+}
+
+a:hover .linkBody {
+  color: #000;
+}
+
+a.active .linkBody {
+  background-color: $mainGreen;
+  color: #FFF;
+}

@@ -1,3 +1,5 @@
+@import '../../styles/variables';
+
 .dialogs {
   display: flex;
 }
@@ -13,8 +15,7 @@
 
 .usersItem a {
   text-decoration: none;
-  color: #000;
-  font-size: 20px;
+
 }
 
 .dialogsList {

@@ -6,13 +6,13 @@ function CustomLink({children, to, styles, ...props}) {
   let match = useMatch({path: resolved.pathname, end: true})
 
   return (
-    <Link
-      className={match ? styles.active : ''}
-      to={to}
-      {...props}
-    >
-      {children}
-    </Link>
+      <Link
+        className={match ? styles.active : ''}
+        to={to}
+        {...props}
+      >
+        {children}
+      </Link>
   )
 }
 

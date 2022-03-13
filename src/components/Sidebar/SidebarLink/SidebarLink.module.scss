@@ -1,0 +1,50 @@
+@import '../../../styles/variables';
+
+.linkBody {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 5px 30px;
+  border-radius: 0 25px 25px 0;
+}
+
+.linkText {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 300;
+}
+
+.linkIcon > svg {
+  fill: #FFF;
+  width: 20px;
+  height: 20px;
+}
+
+a.active > .linkBody {
+  background-color: $mainGreen;
+}
+
+a.active > .linkIcon > svg {
+  fill: #FFF;
+}
+
+a.active > .linkText {
+  color: #FFF;
+}
+
+.linkBody:hover > .linkText {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.linkBody:hover > .linkIcon > svg {
+  fill: rgba(255, 255, 255, 0.7);
+}
+
+a.active > .linkBody:hover > .linkText {
+  color: #FFF;
+}
+
+a.active > .linkBody:hover > .linkIcon > svg {
+  fill: #FFF;
+}
