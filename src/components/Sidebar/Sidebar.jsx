@@ -1,4 +1,5 @@
 import React from 'react'
+import icons from '../../images/icons/sidebar/sidebar-sprite.svg'
 import SidebarLink from './SidebarLink/SidebarLink'
 import classes from './Sidebar.module.scss'
 
@@ -10,44 +11,44 @@ const Sidebar = () => {
         <ul className={classes.list}>
           <li className={classes.item}>
             <SidebarLink
-              to="/profile"
+              to="profile"
               text="Profile"
-              iconHref="./img/icons/sidebar/sidebar-sprite.svg#home-icon"
+              iconHref={`${icons}#home-icon`}
             />
           </li>
           <li className={classes.item}>
             <SidebarLink
-              to="/home"
+              to="home"
               text="Home"
-              iconHref="./img/icons/sidebar/sidebar-sprite.svg#home-icon"
+              iconHref={`${icons}#home-icon`}
             />
           </li>
           <li className={classes.item}>
             <SidebarLink
-              to="/dialogs"
+              to="dialogs"
               text="Messages"
-              iconHref="./img/icons/sidebar/sidebar-sprite.svg#messages-icon"
+              iconHref={`${icons}#messages-icon`}
             />
           </li>
           <li className={classes.item}>
             <SidebarLink
-              to="/news"
+              to="news"
               text="News"
-              iconHref="./img/icons/sidebar/sidebar-sprite.svg#news-icon"
+              iconHref={`${icons}#news-icon`}
             />
           </li>
           <li className={classes.item}>
             <SidebarLink
-              to="/music"
+              to="music"
               text="Music"
-              iconHref="./img/icons/sidebar/sidebar-sprite.svg#music-icon"
+              iconHref={`${icons}#music-icon`}
             />
           </li>
           <li className={classes.item}>
             <SidebarLink
-              to="/settings"
+              to="settings"
               text="Settings"
-              iconHref="./img/icons/sidebar/sidebar-sprite.svg#settings-icon"
+              iconHref={`${icons}#settings-icon`}
             />
           </li>
         </ul>

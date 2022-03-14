@@ -25,11 +25,11 @@ ReactDOM.render(
         <Route path="/" element={<Navigate to="home" replace/>}/>
         <Route path="profile" element={<Profile />} />
         <Route path="home" element={<Home />} />
-        <Route path="dialogs" element={<Dialogs />}>
-          <Route path="1" element={<Message message="Hello, what's up?"/>} />
-          <Route path="2" element={<Message message="Where are you?"/>} />
-          <Route path="3" element={<Message message="Nice try!"/>} />
-          <Route path="4" element={<Message message="Good job."/>} />
+        <Route path="dialogs/*" element={<Dialogs />}>
+          <Route path=":dialogId" element={<Message message="Hello, what's up?"/>} />
+          <Route path=":dialogId" element={<Message message="Where are you?"/>} />
+          <Route path=":dialogId" element={<Message message="Nice try!"/>} />
+          <Route path=":dialogId" element={<Message message="Good job."/>} />
         </Route>
         <Route path="news" element={<News />} />
         <Route path="music" element={<Music />} />
