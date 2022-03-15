@@ -18,6 +18,52 @@ import Settings from './components/Settings/Settings'
 
 import 'normalize.css'
 
+const users = [
+  {
+    id: 1,
+    name: 'Dmitry'
+  },
+  {
+    id: 2,
+    name: 'Alexandra'
+  },
+  {
+    id: 3,
+    name: 'Alice'
+  },
+  {
+    id: 4,
+    name: 'Stan'
+  }
+]
+
+const dialogs = [
+  {
+    id: 1,
+    message: 'Hello, what\'s up?'
+  },
+  {
+    id: 2,
+    message: 'Where are you?'
+  },
+  {
+    id: 3,
+    message: 'Nice try!'
+  },
+  {
+    id: 4,
+    message: 'Good job.'
+  }
+]
+
+export function getUsers() {
+  return users
+}
+
+export function getDialogs() {
+  return dialogs
+}
+
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
@@ -26,10 +72,7 @@ ReactDOM.render(
         <Route path="profile" element={<Profile />} />
         <Route path="home" element={<Home />} />
         <Route path="dialogs/*" element={<Dialogs />}>
-          <Route path=":dialogId" element={<Message message="Hello, what's up?"/>} />
-          <Route path=":dialogId" element={<Message message="Where are you?"/>} />
-          <Route path=":dialogId" element={<Message message="Nice try!"/>} />
-          <Route path=":dialogId" element={<Message message="Good job."/>} />
+          <Route path=":dialogId" element={<Message />} />
         </Route>
         <Route path="news" element={<News />} />
         <Route path="music" element={<Music />} />
