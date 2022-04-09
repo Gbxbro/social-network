@@ -2,11 +2,15 @@
 
 .dialogs {
   display: flex;
+  gap: 30px;
+}
+
+.dialogsTitle {
+
 }
 
 .usersList {
   list-style: none;
-  padding: 10px;
 }
 
 .usersItem:not(:last-child) {
@@ -15,14 +19,5 @@
 
 .usersItem a {
   text-decoration: none;
-
-}
-
-.dialogsList {
-  list-style: none;
-  padding: 10px;
-}
-
-.dialogsItem {
 
 }

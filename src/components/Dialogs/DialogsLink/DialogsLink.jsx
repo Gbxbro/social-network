@@ -1,5 +1,5 @@
 import React from 'react'
-import CustomLink from '../../UI/CustomLink'
+import CustomLink from '../../UI/CustomLink/CustomLink'
 import classes from './DialogsLink.module.scss'
 
 const DialogsLink = ({children, to, ...props}) => {

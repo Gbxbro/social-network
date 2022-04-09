@@ -1,0 +1,28 @@
+@import '../../../../styles/variables';
+
+.messageForm {
+
+}
+
+.messageTextarea {
+  display: block;
+  width: 100%;
+  resize: none;
+  outline: none;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.submitButton {
+  border: none;
+  background-color: $mainGreen;
+  border-radius: 14px;
+  padding: 10px 25px;
+  color: #FFF;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba($mainGreen, 0.8);
+  }
+}

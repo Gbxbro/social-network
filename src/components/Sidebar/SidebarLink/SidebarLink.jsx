@@ -1,5 +1,5 @@
 import React from 'react'
-import CustomLink from '../../UI/CustomLink'
+import CustomLink from '../../UI/CustomLink/CustomLink'
 import classes from './SidebarLink.module.scss'
 
 const SidebarLink = ({to, iconHref, text, ...props}) => {

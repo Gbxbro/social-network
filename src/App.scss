@@ -25,39 +25,3 @@ ul {
 img {
   width: 100%;
 }
-
-.container {
-  max-width: $xxl-bp;
-  margin: 0 auto;
-  padding: 0 15px;
-
-  @include breakpoint($xxl-bp) {
-    max-width: $xl-bp;
-  }
-
-  @include breakpoint($xl-bp) {
-    max-width: $lg-bp;
-  }
-
-  @include breakpoint($lg-bp) {
-    max-width: $md-bp;
-  }
-
-  @include breakpoint($md-bp) {
-    max-width: $sm-bp;
-  }
-}
-
-.grid-wrapper {
-  display: grid;
-
-  grid-template-areas:
-    "sidebar header"
-    "sidebar content";
-  grid-template-rows: 60px 1fr;
-  grid-template-columns: 2fr 10fr;
-}
-
-.app-wrapper {
-  grid-area: content;
-}
