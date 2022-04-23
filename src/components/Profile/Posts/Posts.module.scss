@@ -1,3 +1,19 @@
-.posts {
+@import '../../../styles/variables';
 
+.posts {
+  height: 300px;
+  overflow-y: auto;
+  margin-bottom: 70px;
+  padding-right: 10px;
+}
+
+.postsList {
+
+}
+
+.postsItem {
+  width: 100%;
+  background-color: $gray;
+  padding: 10px;
+  margin-bottom: 10px;
 }

@@ -1,5 +1,18 @@
 const store = {
   _state: {
+    profilePage: {
+      currentPostMessage: '',
+      posts: [
+        {
+          id: 1,
+          message: 'My first post'
+        },
+        {
+          id: 2,
+          message: 'My second post'
+        }
+      ]
+    },
     dialogsPage: {
       users: [
         {
@@ -38,9 +51,10 @@ const store = {
         }
       ],
       currentMessage: '',
-    },
+    }
   },
-  _callSubscriber() {},
+  _callSubscriber() {
+  },
 
   getState() {
     return this._state
@@ -51,7 +65,7 @@ const store = {
   },
 
   dispatch(action) {
-    switch(action.type) {
+    switch (action.type) {
       case 'ADD-MESSAGE':
         this._state.dialogsPage.messages.push({
           id: action.id,
@@ -62,6 +76,18 @@ const store = {
         break
       case 'UPDATE-CURRENT-MESSAGE':
         this._state.dialogsPage.currentMessage = action.value
+        this._callSubscriber()
+        break
+      case 'ADD-POST':
+        this._state.profilePage.posts.push({
+          id: action.id,
+          message: this._state.profilePage.currentPostMessage
+        })
+        this._state.profilePage.currentPostMessage = ''
+        this._callSubscriber()
+        break
+      case 'UPDATE-CURRENT-POST-MESSAGE':
+        this._state.profilePage.currentPostMessage = action.value
         this._callSubscriber()
         break
     }

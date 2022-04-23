@@ -17,12 +17,19 @@ const App = ({store}) => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route path="/" element={<Navigate to="home" replace />} />
-        <Route path="profile" element={<Profile />} />
+        <Route path="profile" element=
+          {
+            <Profile
+              currentPostMessage={state.profilePage.currentPostMessage}
+              posts={state.profilePage.posts}
+              dispatch={store.dispatch.bind(store)}
+            />
+          }
+        />
         <Route path="home" element={<Home />} />
         <Route path="dialogs/*" element={<Dialogs users={state.dialogsPage.users} />}>
-          <Route
-            path=":dialogId"
-            element={
+          <Route path=":dialogId" element=
+            {
               <Messages
                 messages={state.dialogsPage.messages}
                 currentMessage={state.dialogsPage.currentMessage}
