@@ -9,6 +9,7 @@
 }
 
 body {
+  height: 100%;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
@@ -24,4 +25,26 @@ ul {
 
 img {
   width: 100%;
+}
+
+.container {
+  max-width: $xxl-bp;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @include breakpoint($xxl-bp) {
+    max-width: $xl-bp;
+  }
+
+  @include breakpoint($xl-bp) {
+    max-width: $lg-bp;
+  }
+
+  @include breakpoint($lg-bp) {
+    max-width: $md-bp;
+  }
+
+  @include breakpoint($md-bp) {
+    max-width: $sm-bp;
+  }
 }

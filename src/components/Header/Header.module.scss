@@ -1,6 +1,11 @@
 @import '../../styles/variables';
 
 .header {
-  grid-area: header;
+  position: fixed;
+  z-index: $header-z-index;
+  top: 0;
+  left: $sidebarWidth;
+  width: 100%;
   background-color: $gray;
+  padding: 0 20px;
 }

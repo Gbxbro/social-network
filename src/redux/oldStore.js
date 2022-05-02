@@ -1,4 +1,7 @@
-const store = {
+import dialogsPage from './reducers/dialogsPage'
+import profilePage from './reducers/profilePage'
+
+const oldStore = {
   _state: {
     profilePage: {
       currentPostMessage: '',
@@ -65,33 +68,10 @@ const store = {
   },
 
   dispatch(action) {
-    switch (action.type) {
-      case 'ADD-MESSAGE':
-        this._state.dialogsPage.messages.push({
-          id: action.id,
-          message: this._state.dialogsPage.currentMessage
-        })
-        this._state.dialogsPage.currentMessage = ''
-        this._callSubscriber()
-        break
-      case 'UPDATE-CURRENT-MESSAGE':
-        this._state.dialogsPage.currentMessage = action.value
-        this._callSubscriber()
-        break
-      case 'ADD-POST':
-        this._state.profilePage.posts.push({
-          id: action.id,
-          message: this._state.profilePage.currentPostMessage
-        })
-        this._state.profilePage.currentPostMessage = ''
-        this._callSubscriber()
-        break
-      case 'UPDATE-CURRENT-POST-MESSAGE':
-        this._state.profilePage.currentPostMessage = action.value
-        this._callSubscriber()
-        break
-    }
+    this._state.profilePage = profilePage(this._state.profilePage, action)
+    this._state.dialogsPage = dialogsPage(this._state.dialogsPage, action)
+    this._callSubscriber()
   },
 }
 
-export default store
+export default oldStore

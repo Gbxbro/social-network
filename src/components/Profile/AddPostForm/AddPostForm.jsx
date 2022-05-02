@@ -1,11 +1,12 @@
 import React from 'react'
 import classes from './AddPostForm.module.scss'
+import actionTypes from '../../../redux/actions/actionTypes'
 
 const AddPostForm = ({currentPostMessage, dispatch}) => {
 
   const updateCurrentPostMessage = e => {
     dispatch({
-      type: 'UPDATE-CURRENT-POST-MESSAGE',
+      type: actionTypes.UPDATE_CURRENT_POST_MESSAGE,
       value: e.target.value
     })
   }
@@ -13,7 +14,7 @@ const AddPostForm = ({currentPostMessage, dispatch}) => {
   const addPost = e => {
     e.preventDefault()
     dispatch({
-      type: 'ADD-POST',
+      type: actionTypes.ADD_POST,
       id: 1
     })
   }

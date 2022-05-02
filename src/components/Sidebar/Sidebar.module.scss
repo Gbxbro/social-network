@@ -1,9 +1,13 @@
 @import '../../styles/variables';
 
 .sidebar {
-  grid-area: sidebar;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $sidebar-z-index;
+  width: $sidebarWidth;
+  height: 100vh;
   background-color: $dark;
-  height: 100%;
   padding: 30px 40px 0 0;
 }
 

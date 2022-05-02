@@ -6,15 +6,13 @@ import classes from './Layout.module.scss'
 
 const Layout = () => {
   return (
-    // <div className={classes.container}>
     <div className={classes.gridWrapper}>
       <Header />
       <Sidebar />
       <div className={classes.appWrapper}>
-        <Outlet />
+          <Outlet />
       </div>
     </div>
-    // </div>
   )
 }
 

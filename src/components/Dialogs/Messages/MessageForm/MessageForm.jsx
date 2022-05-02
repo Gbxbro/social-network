@@ -1,11 +1,12 @@
 import React from 'react'
+import actionTypes from '../../../../redux/actions/actionTypes'
 import classes from './MessageForm.module.scss'
 
 const MessageForm = ({dialogId, currentMessage, dispatch}) => {
   const sendMessage = (e) => {
     e.preventDefault()
     dispatch({
-      type: 'ADD-MESSAGE',
+      type: actionTypes.ADD_MESSAGE,
       id: dialogId
     })
   }
@@ -13,7 +14,7 @@ const MessageForm = ({dialogId, currentMessage, dispatch}) => {
   const updateMessageText = (e) => {
     const text = e.target.value
     dispatch({
-      type: 'UPDATE-CURRENT-MESSAGE',
+      type: actionTypes.UPDATE_CURRENT_MESSAGE,
       value: text
     })
   }
